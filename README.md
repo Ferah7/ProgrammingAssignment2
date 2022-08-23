@@ -1,10 +1,11 @@
 ## The two functions have the ability to store the matrix and its cached version. First, as per ##instruction, we assume that the matrix m is invertible. 
-##makeCacheMatrix stores the matrix and its inverse. It also is an easy and efficient way to recall ##the matrix and its inverse. 
-##cacheSolve recalls the inverse of a matrix if it has already been computed. If the inverse hasn't ##been calculated previously, then it solves for it and stores it in cache
+## The makeCacheMatrix stores the matrix and its inverse. It also is an easy and efficient way to recall ##the matrix and its inverse. 
+## The cacheSolve recalls the inverse of a matrix if it has already been computed. If the inverse hasn't ##been calculated previously, then it solves for it and stores it in cache
+
 
 
 makeCacheMatrix<- function(x = matrix((){
-        inv<-NULL ##this is where the inverted matrix would be
+        inv<-NULL ## this is where the inverted matrix would be
         set<-function(y){
             x<<-y
         }
@@ -15,7 +16,7 @@ makeCacheMatrix<- function(x = matrix((){
             setinversion = setinversion,
             getinversion = getinversion)
 }
-##This checks if theres an inverted matrix already. If there isn't, it solves for one and stores it ##in the cache.
+## This checks if theres an inverted matrix already. If there isn't, it solves for one and stores ## it in the cache.
 
 cacheSolve <- function(w,...){
         inv <- w$getinversion()
