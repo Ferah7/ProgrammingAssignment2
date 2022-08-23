@@ -5,8 +5,12 @@
 ## 
 ## The cacheSolve recalls the inverse of a matrix if it has already been computed. If the inverse ## hasn't been calculated previously, then it solves for it and stores it in cache
 
-makeCacheMatrix<- function(x = matrix((){
-        inv<-NULL ## this is where the inverted matrix would be
+makeCacheMatrix <- function(x = matrix((){
+
+
+        inv <- NULL ## this is where the inverted matrix would be
+        
+        
         set<-function(y){
             x<<-y
         }
