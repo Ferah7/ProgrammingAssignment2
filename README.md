@@ -4,9 +4,7 @@
 
 
 makeCacheMatrix<- function(x = matrix((){
-        inv<-NULL##this is where the inverted matrix would be
-        
-        
+        inv<-NULL ##this is where the inverted matrix would be
         set<-function(y){
             x<<-y
         }
@@ -25,7 +23,6 @@ cacheSolve <- function(w,...){
                 message("using cache data")
                 return(inv)
         }
-
         matrix <-w$get()
         inv <- solve(matrix,...)
         w$setinversion(inv)
